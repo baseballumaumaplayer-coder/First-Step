@@ -1,0 +1,73 @@
+/* --- ヘッダー修正版 --- */
+.main-header {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* centerに修正！ */
+}
+
+/* 点を消して横に並べる（確実な方法） */
+.main-header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header li {
+    margin-left: 35px;
+}
+
+.header-logo a {
+    display: inline-block; /* クリック範囲をしっかり確保 */
+    pointer-events: auto; /* クリックを有効化 */
+}
+
+/* ロゴのサイズ */
+.header-logo img {
+    width: 60px;             /* スタバロゴの標準的な存在感 */
+    height: auto;
+    align-items: center;
+    padding: 10px 5%;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+/* メニューの並び */
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin-left: 35px;       /* 項目同士の間隔を広く取るのがスタバ流 */
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #212121;          /* 漆黒ではない、オシャレな黒 */
+    font-size: 14px;
+    font-weight: 700;        /* かなり太めのフォント */
+    letter-spacing: 0.1em;   /* 文字の間隔を空けて「高級感」を出す */
+    transition: color 0.2s;
+}
+
+.nav-list a:hover {
+    color: #00704a;          /* ホバーした時のブランドカラー */
+}
