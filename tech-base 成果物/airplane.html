@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Tracker</title>
+    <link rel="stylesheet" href="airplane.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>✈️ Flight Tracker (OpenSky API)</h1>
+    
+    <div class="config-panel">
+        <button id="themeToggle">テーマ切り替え (Dark/Light)</button>
+        <p>
+            <label for="countryInput">デフォルト表示する空港（英語）:</label>
+            <input type="text" id="countryInput" value="Japan">
+            <button id="saveAirportBtn">この空港をCookieに保存</button>
+        </p>
+    </div>
+
+    <button id="fetchFlightsBtn">最新のフライト情報を取得</button>
+    <span id="loadingText" class="loading">データを取得中...</span>
+
+    <table id="flightTable">
+        <thead>
+            <tr>
+                <th>便名 (Callsign)</th>
+                <th>出発国 (Country)</th>
+                <th>経度 (Longitude)</th>
+                <th>緯度 (Latitude)</th>
+                <th>状態 (On Ground)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="5" style="text-align: center;">ボタンを押してデータを取得してください</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="airplane.js"></script>
+<script src="airplane.app.js"></script>
+</body>
+</html>
