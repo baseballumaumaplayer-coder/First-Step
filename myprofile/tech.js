@@ -41,13 +41,11 @@ for (let i=0; i<=29; i++){
     }
 }
 
-var object2 = document.getElementById("omikujiresult");
-var text = prompt("おみくじを引いてください")
-object2.innerText=text;
-
 function omikujishow() {
-  var omikuji = ["大吉", "中吉", "小吉", "末吉", "凶"];
+  var omikuji = new Array("大吉", "中吉", "小吉", "末吉", "凶");
   var randomIndex = Math.floor(Math.random() * omikuji.length);
   var result = omikuji[randomIndex];
-  object2.innerText = result;         
+  var object = document.getElementById("omikujiresult");
+  object.innerText = result;         
 }     
+
